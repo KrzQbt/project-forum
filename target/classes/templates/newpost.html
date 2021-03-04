@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li> <a  th:href="@{/main}" > main </a></li>
+        <li><a th:href="@{/login}"> login </a></li>
+        <li><a th:href="@{/register}"> register </a></li>
+
+
+    </ul>
+
+</nav>
+
+<div id="content">
+    <form method="post" id="addForm">
+        <p>type your new post</p>
+        <input type="text" th:field="*{post.content}" placeholder="content">
+
+
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>
